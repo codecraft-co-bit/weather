@@ -1,0 +1,130 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* App container */
+.app {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #fff;
+  padding: 120px;
+  border-radius: 10px;
+  box-shadow: 0 4px 38px rgba(0, 0, 0, 0.1);
+}
+
+/* Left column styles */
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.left-column h1 {
+  color: #333;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.city-input {
+  padding: 10px;
+  font-size: 1.2rem;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(80, 103, 110, 0.444);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #177f36;
+  color: #fff;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #3bc45d;
+}
+
+/* Right column styles (weather details) */
+.right-column {
+  flex: 1;
+}
+
+.weather-card {
+  background-color: rgb(176, 207, 221);
+  padding: 80px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.weather-card p {
+  font-size: 1.5rem;
+  margin: 8px 0;
+  color: #555;
+}
+
+/* Loading and error message styles */
+.loading {
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.error {
+  font-size: 1.2rem;
+  color: red;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .city-input {
+    width: 80%;
+    max-width: none;
+  }
+
+  .left-column h1 {
+    font-size: 1.8rem;
+  }
+
+  .weather-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .weather-card p {
+    font-size: 1rem;
+  }
+}
